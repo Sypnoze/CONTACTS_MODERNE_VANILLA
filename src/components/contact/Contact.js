@@ -7,12 +7,14 @@ export default class Contact {
     this.lastname = data.lastname;
     this.email = data.email;
     this.createdAt = data.createdAt;
+    this.domELT = null;
     
   }
   render (elt) {
-    const template = document.createElement("div");
+    const template = document.createElement("template");
     template.innerHTML = getTemplate(this);
-    elt.append(template);
+    this.domELT = template.content.firstElementChild;
+    elt.append(this.domELT);
 
   }
 }
