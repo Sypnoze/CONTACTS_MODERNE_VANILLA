@@ -13,8 +13,18 @@ export default class ContactsList {
     this.contacts = contacts.map((contact)=> new Contact(contact));
     this.render();
   }
+  getItemsLeftCount(){
+    return this.contacts.length;
+  }
+
+renderItemsleftCount(){
+  this.domELT.querySelector(".contact-count strong").innerText =
+  this.getItemsLeftCount();
+}
+
   render(){
     this.domELT.innerHTML = getTemplate();
     this.contacts.forEach((contact)=>contact.render(this.domELT.querySelector(".contacts-table tbody")));
+    this.renderItemsleftCount();
   };
 }
