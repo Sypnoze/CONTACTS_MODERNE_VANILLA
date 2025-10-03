@@ -46,6 +46,17 @@ async addContact(firstName, lastName, email) {
   this.render();
 }
 
+async deleteOneById (id){
+//supprimer de la DB
+const resp = await DB.deleteOneById(id);
+// supprimer les contacts
+this.contacts.splice(this.contacts.findIndex((contact)=>(contact.id == id) ),1);
+//supriler du dom --->>> dans contactlist plus rapide
+
+
+// relancer le this.renderItemsleftCount();
+this.renderItemsleftCount();
+}
 
   initEvents() {
   // Ajout de l'événement click au bouton "Add"
