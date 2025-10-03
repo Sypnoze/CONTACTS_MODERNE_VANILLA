@@ -33,7 +33,7 @@ export default function getTemplate(){
           />
         </div>
         <button
-          class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
+          class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md new-contact"
         >
           Add
         </button>
@@ -44,7 +44,7 @@ export default function getTemplate(){
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-xl font-bold mb-4">Contacts List</h2>
           <p class="text-gray-600 mb-4">
-            Contacts Count : <span class="font-bold  contact-count "><strong>X</strong> contact(s)</span>
+            Contacts Count : <span class="font-bold  contact-count"><strong>X</strong></span>
           </p>
         </div>
 
