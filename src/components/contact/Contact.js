@@ -28,7 +28,7 @@ export default class Contact {
 
     this.domELT.querySelector(".btn-edit").addEventListener("click", () => {
       this.domELT.classList.add("isEditing");
-      this.makeEditable();
+      this.edit();
     });
 
     this.domELT.querySelector(".btn-check").addEventListener("click", () => {
@@ -56,7 +56,7 @@ export default class Contact {
     await DB.updateOne(this);
   }
 
-  makeEditable() {
+  edit() {
     // On rend les champs de saisie visibles et cache les spans
     this.domELT.querySelector('.input-firstname').classList.add('isEditing-visible');
     this.domELT.querySelector('.input-lastname').classList.add('isEditing-visible');
